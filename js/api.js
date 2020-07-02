@@ -1,6 +1,5 @@
 var search = document.getElementById('input'),
     match = document.getElementById('list'),
-    li = document.getElementById('show'),
     string = ''
     array = []
 
@@ -9,7 +8,6 @@ function ajaxGet(url, callback) {
   req.open("GET", url);
   req.addEventListener("load", function () {
     if (req.status >= 200 && req.status < 400) {
-        // Appelle la fonction callback en lui passant la réponse de la requête
         callback(req.responseText);
     } else {
         console.error(req.status + " " + req.statusText + " " + url);
@@ -50,7 +48,7 @@ voyelle = () => {
 outputHtml = matches => {
   array = voyelle()
   if(matches.length > 0 ){
-    const html = matches.map((match, key) => `
+    const html = matches.map(match => `
       <div class="search"> 
         <img src="${match.flag}" alt="">
         <p>la population de ${match.name} est de ${match.population} habitans</p>

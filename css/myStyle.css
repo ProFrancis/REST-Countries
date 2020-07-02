@@ -6,12 +6,15 @@
 	font: inherit;
 	vertical-align: baseline;
 }
+:root{
+  --primary-color: white;
+}
 ol, ul {
 	list-style: none;
 }
 a{
 	text-decoration: none;
-	color: white;
+	color: var(--primary-color);
 }
 body{
 	line-height: 1;
@@ -20,31 +23,32 @@ body{
 	font-family: "Roboto", sans-serif;
 }
 header{
-	padding: 1em 25em;
+	padding: 1em 40em;
 }
 h1{
-	color: white;
+	color: var(--primary-color);
 	font-size: 1.5em;
 	position: absolute;
 }
 h2{
-	color: white;
+	color: var(--primary-color);
 	font-size: 2em;
     margin-bottom: 1em;
 }
 main{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 nav{
 	display: flex;
 	flex-direction: row-reverse;
 }
 nav > ul > li {
-	border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  border-bottom: 3px solid var(--primary-color);
 }
 input{
-	width: 15em;
+  width: 40em;
 	border-radius: 5px;
 	padding: 0.5em 0.5em;
 }
@@ -58,14 +62,28 @@ section{
 	padding: 10px;
 	color: #ffffff73;
 	border-radius: 5px;
-	border: 1px solid white;
+	border: 1px solid var(--primary-color);
 }
 #list{
 	display: flex;
+	margin-top: 1.5em;
+	flex-direction: column;
 }
 .search{
-	color: white;
-	border: 1px solid white;
-	padding: 10px;
-	border-radius: 10px;
+  width: 40em;
+  display: grid;
+  align-self: center;
+  border-radius: 10px;
+  color: var(--primary-color);
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}
+img{
+	width: 15em;
+  object-fit: contain;
+  border-radius: 10px 0px 0px 0px;
+}
+p{
+  color: black;
+  line-height: 2em;
 }
