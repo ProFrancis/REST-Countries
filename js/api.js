@@ -46,9 +46,11 @@ check = (textCheked, arrayCheked) => {
   if(textCheked.length === 0 || arrayCheked.length === 0 ){
     arrayCheked = []
     match.innerHTML = ''
-    console.log('AUCUNE VALEUR TROUVE')
+    console.log('AUCUNE PAYS TROUVE')
+  }else{
+    console.log('PAYS TROUVE')
+    outputHtml(arrayCheked)
   }
-  outputHtml(arrayCheked)
 }
 
 voyelle = () => {
