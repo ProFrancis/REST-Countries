@@ -52,7 +52,7 @@ input{
 	border-radius: 5px;
 	padding: 0.5em 0.5em;
 }
-input:focus{
+input:focus, button:focus{
   outline: none;
 }
 section{
@@ -89,4 +89,15 @@ img{
 p{
   color: black;
   line-height: 2em;
+}
+p::first-letter{
+  text-transform: capitalize;
+}
+#discover > p{
+  color: var(--primary-color);
+}
+button{
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 5px;
 }

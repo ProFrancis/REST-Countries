@@ -22,6 +22,17 @@ function ajaxGet(url, callback) {
 ajaxGet('https://restcountries.eu/rest/v2/all', function(response){
   var data = JSON.parse(response)
 
+  discover = () => {
+    let val = search.value.toUpperCase()
+    let domHtml
+    const rest = data.map(state => {
+      if(state.name.toUpperCase().includes(val)){
+        console.log(state)
+        domHtml += ` `
+      }
+    })
+  }
+
   searchStates = async searchText => {
     let matches = await data.filter(state => {
       const regex = new RegExp(`^${searchText}`, 'gi')
@@ -53,7 +64,7 @@ outputHtml = matches => {
         <img src="${match.flag}" alt="">
         <p>la population de ${match.name} est de ${match.population} habitans</p>
         <p>sa capitale est ${match.capital}</p>
-        <p>sa monnaie est ${string = array.includes(match.currencies[0].name.charAt(0).toUpperCase()) ? "l '" : "le "} ${match.currencies[0].name}</p>
+        <p>sa monnaie est ${string = array.includes(match.currencies[0].name.charAt(0).toUpperCase()) ? "l'" : "le "}${match.currencies[0].name}</p>
         <p>Ce pays est situé en ${match.region}, plus précisément en ${match.subregion}</p>
       </div>
     `
