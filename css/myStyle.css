@@ -52,6 +52,9 @@ input{
 	border-radius: 5px;
 	padding: 0.5em 0.5em;
 }
+input:focus{
+  outline: none;
+}
 section{
 	width: 960px;
 	align-self: center;
