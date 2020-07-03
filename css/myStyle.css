@@ -23,7 +23,7 @@ body{
 	font-family: "Roboto", sans-serif;
 }
 header{
-	padding: 1em 40em;
+	padding: 1em 25em;
 }
 h1{
 	color: var(--primary-color);

@@ -22,10 +22,10 @@ function ajaxGet(url, callback) {
 ajaxGet('https://restcountries.eu/rest/v2/all', function(response){
   var data = JSON.parse(response)
 
-  discover = () => {
+  discover = async () => {
     let val = search.value.toUpperCase()
-    let domHtml
-    const rest = data.map(state => {
+    let domHtml = ''
+    const rest = await data.map(state => {
       if(state.name.toUpperCase().includes(val)){
         console.log(state)
         domHtml += ` `
